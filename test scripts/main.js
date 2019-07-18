@@ -13,12 +13,12 @@ export let options = {
 };
 
 export default function() {
-    check(c.updateC(), {"first c.updateC is 2":(s)=> s == 2}) || myFailCount.add(1);
-    check(c.updateC(), {"second c.updateC is 3":(s)=> s == 3}) || myFailCount.add(1);
-    check(g.updateC(), {"first g.updateC is 1":(s)=> s == 1}) || myFailCount.add(1);
-    check(g.updateC(), {"second g.updateC is 2":(s)=> s == 2}) || myFailCount.add(1);
-    check(g.updateCHttps(), {"first g.updateCHttps is 1":(s)=> s == 1}) || myFailCount.add(1);
-    check(g.updateCHttps(), {"second g.updateCHttps is 2":(s)=> s == 2}) || myFailCount.add(1);
-    check(g.updateCSchemeless(), {"first g.updateCSchemeless is 1":(s)=> s == 1}) || myFailCount.add(1);
-    check(g.updateCSchemeless(), {"second g.updateCSchemeless is 2":(s)=> s == 2}) || myFailCount.add(1);
+    check(c.updateC(), {"first c.updateC is 2":(s)=> s == __ITER*2 + 2}) || myFailCount.add(1);
+    check(c.updateC(), {"second c.updateC is 3":(s)=> s == __ITER*2 + 3}) || myFailCount.add(1);
+    check(g.updateC(), {"first g.updateC is 1":(s)=> s == __ITER*2 +1}) || myFailCount.add(1);
+    check(g.updateC(), {"second g.updateC is 2":(s)=> s == __ITER*2 + 2}) || myFailCount.add(1);
+    check(g.updateCHttps(), {"first g.updateCHttps is 1":(s)=> s == __ITER*2 + 1}) || myFailCount.add(1);
+    check(g.updateCHttps(), {"second g.updateCHttps is 2":(s)=> s == __ITER*2 + 2}) || myFailCount.add(1);
+    check(g.updateCSchemeless(), {"first g.updateCSchemeless is 1":(s)=> s == __ITER*2 + 1}) || myFailCount.add(1);
+    check(g.updateCSchemeless(), {"second g.updateCSchemeless is 2":(s)=> s == __ITER*2 + 2}) || myFailCount.add(1);
 }
